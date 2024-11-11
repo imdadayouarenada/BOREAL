@@ -1,0 +1,6 @@
+email:
+  account: humidpreprocess.sendemail@gmail.com #imbie2016@gmail.com # email address to send reports from
+  password: rnfvpfxscvxqjlgu #HUMID_isard12 #t^BMjE9NB82n # password for this email address
+  server: [smtp.gmail.com, 465] # SMTP server and port number for the email account
+  to: [carlotta.gile@yahoo.it] # email account(s) to send reports to
+  cc: []
