@@ -3,19 +3,10 @@ import re
 import pandas as pd
 import glob
 import os 
-# import chardet
-
 
 def parse_file(filepath):
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
         lines = file.readlines()
-
-    # with open(filepath, 'rb') as file:
-    #     raw_data = file.read(10000)  # Reading a portion of the file
-    #     result = chardet.detect(raw_data)
-    #     encoding = result['encoding']
-    # with open(filepath, 'r', encoding=encoding) as file:
-    #     lines = file.readlines()
 
     # Mapping from file parameter names to dictionary keys
     parameter_mapping = {
@@ -25,7 +16,7 @@ def parse_file(filepath):
         'Reff(um)': ('Reff', 'mean', 'Reff', 'std'),
         'Tot_residual': ('Tot_residual', 'mean' ,'Tot_residual', 'std'),
     }
-    # Initialize data for df_type1 with placeholders for each value
+    # Initialize data for df_type1 
     data_type1 = {
         ('IS', ''): None,
         ('mR', 'mean'): np.nan, ('mR', 'std'): np.nan,
@@ -53,9 +44,6 @@ def parse_file(filepath):
 
     data_type1[('IS', '')] = num_solutions
     
-
-
-
     # Extract mR, mI, Vt, Reff, Tot_residual
     start_index = lines.index(" mean std\n") + 1
     end_index = lines.index("r(um) dv/dlnr_mean(um^3/cm^3) dv/dlnr_std(um^3/cm^3)\n")
@@ -74,11 +62,7 @@ def parse_file(filepath):
 
         try:
             data_type1[(parameter_full, 'mean')] = float(mean)
-            # print(float(mean))
-            # print(data_type1[(parameter_full, 'mean')])
             data_type1[(parameter_full, 'std')] = float(std)
-            # print(float(std))
-            # print(data_type1[(parameter_full, 'std')])
         except ValueError as e:
             print(f"Error processing line: '{line.strip()}'. Error: {e}")
     
@@ -108,24 +92,6 @@ def parse_file(filepath):
 
     return df_type1, df_type2
 
-
-# def create_combined_dataframe(folder_path, file_pattern='Case*.txt'):
-#     full_pattern = os.path.join(folder_path, file_pattern)
-#     filepaths = glob.glob(full_pattern)
-    
-#     filepaths = sorted(filepaths)
-    
-#     dataframe_list = []
-    
-#     for filepath in filepaths:
-#         df_type1, _ = parse_file(filepath)
-#         dataframe_list.append(df_type1)
-    
-#     combined_dataframe = pd.concat(dataframe_list, ignore_index=False)
-    
-#     return combined_dataframe
-
-
 def create_combined_dataframe(folder_path, file_pattern='Case*.txt'):
     filepaths = glob.glob(os.path.join(folder_path, file_pattern))
     filepaths.sort(key=lambda x: int(re.search(r'Case(\d+)', os.path.basename(x)).group(1)))
@@ -141,7 +107,7 @@ def create_combined_dataframe(folder_path, file_pattern='Case*.txt'):
             continue  # Skip the rest of the loop and proceed with the next file
 
     if not dataframe_list:
-        return None  # or an empty DataFrame if you prefer
+        return None  
 
     combined_dataframe = pd.concat(dataframe_list, ignore_index=False)
     return combined_dataframe
