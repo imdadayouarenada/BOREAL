@@ -37,7 +37,7 @@ Make sure Graphviz software is installed on your system (required for the `graph
 
 #### **Step 1: Clone the Repository**
 ```bash
-git clone <repository-url>
+git clone <https://github.com/imdadayouarenada/BOREAL.git>
 cd <repository-directory>
 ```
 
@@ -46,7 +46,7 @@ Create and activate a Python virtual environment:
 ```bash
 python3 -m venv boreal-env
 source boreal-env/bin/activate  # On Linux/Mac
-venv\Scripts\activate     # On Windows
+boreal-env\Scripts\activate     # On Windows
 ```
 
 #### **Step 3: Install Dependencies**
@@ -76,7 +76,7 @@ Ensure Graphviz is installed:
    python script_name.py
    ```
 3. **Outputs**:
-   - Results will be saved in the specified directory (e.g., `Retrieval_Uncertainty`).
+   - Results will be saved in the specified directory.
 
 ---
 
