@@ -3,7 +3,7 @@
 ---
 
 ### **Description**
-This project automates the retrieval of atmospheric data from the Boreal website using Selenium. The script:
+This project automates the retrieval of atmospheric data from the BOREAL website using Selenium. The script:
 1. Configures parameters for extinction, backscatter, and depolarization.
 2. Run all the possible combinations of input parameters.
 3. Generates multiple realizations to simulate retrieval uncertainty.
