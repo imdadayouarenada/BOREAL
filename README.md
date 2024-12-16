@@ -37,7 +37,7 @@ Make sure Graphviz software is installed on your system (required for the `graph
 
 #### **Step 1: Clone the Repository**
 ```bash
-git clone <https://github.com/imdadayouarenada/BOREAL.git>
+git clone https://github.com/imdadayouarenada/BOREAL.git
 cd <repository-directory>
 ```
 
@@ -73,9 +73,14 @@ Ensure Graphviz is installed:
 1. **Set Up Input Values**: Update extinction, backscatter, and depolarization parameters in the script.
 2. **Run the Script**:
    ```bash
-   python script_name.py
+   python boreal_control.py
    ```
-3. **Outputs**:
+   or
+   ```bash
+   python realizations.py
+   ```
+   
+4. **Outputs**:
    - Results will be saved in the specified directory.
 
 ---
@@ -102,7 +107,7 @@ To modify:
 ---
 
 ### **Contributors**
-- **Your Name** – Carlotta Gilè
+- **Carlotta Gilè** – Project Developer
 
 ---
 
