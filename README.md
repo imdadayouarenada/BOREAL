@@ -37,8 +37,8 @@ Make sure Graphviz software is installed on your system (required for the `graph
 
 #### **Step 1: Clone the Repository**
 ```bash
-git clone https://github.com/imdadayouarenada/BOREAL.git
 cd <repository-directory>
+git clone https://github.com/imdadayouarenada/BOREAL.git
 ```
 
 #### **Step 2: Set Up Virtual Environment**
