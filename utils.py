@@ -121,7 +121,7 @@ def select_particle_shape_model(driver, shape_model):
         # Using inline style for selection
         radio_button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR,
-                f"div[style='margin-bottom: 7px;'] input[type='radio'][value='{value_to_select}']"))
+                f"div[style='margin-bottom: 2px;'] input[type='radio'][value='{value_to_select}']"))
         )
         radio_button.click()
     else:
@@ -150,7 +150,7 @@ def input_extinction(driver, extinction):
             ) 
             input_element_box.send_keys(str(value))  
         except Exception as e:
-            print(f"An error occurred while inputting value {value} with XPath {value_xpath}: {e}")
+            print(f"An error occurred while inputting value {value} with XPath {xpath}: {e}")
     for xpath, error in zip(xpaths_extinction['error'], extinction['error']):
         try: 
             input_element_box = WebDriverWait(driver, 10).until(
@@ -158,7 +158,7 @@ def input_extinction(driver, extinction):
             )  
             input_element_box.send_keys(str(error)) 
         except Exception as e: 
-            print(f"An error occurred while inputting value {error} with XPath {value_xpath}: {e}")
+            print(f"An error occurred while inputting value {error} with XPath {xpath}: {e}")
 
 # FUNCTION TO PUT BACKSCATTERS (VALUES & ERRORS)
 def input_backscatter(driver, backscatter):
@@ -169,7 +169,7 @@ def input_backscatter(driver, backscatter):
             ) 
             input_element_box.send_keys(str(value))
         except Exception as e:
-            print(f"An error occurred while inputting value {value} with XPath {value_xpath}: {e}")
+            print(f"An error occurred while inputting value {value} with XPath {xpath}: {e}")
     for xpath, error in zip(xpaths_backscatter['error'], backscatter['error']):
         try: 
             input_element_box = WebDriverWait(driver, 10).until(
@@ -177,7 +177,7 @@ def input_backscatter(driver, backscatter):
             )  
             input_element_box.send_keys(str(error))
         except Exception as e: 
-            print(f"An error occurred while inputting value {error} with XPath {value_xpath}: {e}")
+            print(f"An error occurred while inputting value {error} with XPath {xpath}: {e}")
 
 # FUNCTION TO PUT PARTICLE DEPOLARIZATION RATIOS (VALUES & ERRORS)
 def input_pd(driver, particle_depolarization):
@@ -188,7 +188,7 @@ def input_pd(driver, particle_depolarization):
             ) 
             input_element_box.send_keys(str(value))
         except Exception as e:
-            print(f"An error occurred while inputting value {value} with XPath {value_xpath}: {e}")
+            print(f"An error occurred while inputting value {value} with XPath {xpath}: {e}")
     for xpath, error in zip(xpaths_particle_depolarization['error'], particle_depolarization['error']):
         try: 
             input_element_box = WebDriverWait(driver, 10).until(
@@ -196,7 +196,7 @@ def input_pd(driver, particle_depolarization):
             )  
             input_element_box.send_keys(str(error))
         except Exception as e: 
-            print(f"An error occurred while inputting value {error} with XPath {value_xpath}: {e}")
+            print(f"An error occurred while inputting value {error} with XPath {xpath}: {e}")
 
 # FUNCTION TO CHECK INVALID INPUTS
 def check_input_value(driver, xpath):

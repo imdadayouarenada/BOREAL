@@ -49,8 +49,8 @@ if not os.path.exists(directory):
 #-------------------------------------------#
 #                   MAIN                    #
 #-------------------------------------------#
-driver = webdriver.Chrome(options=chrome_options)
-# driver = webdriver.Chrome()
+# driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome()
 driver.get("https://boreal.loa.univ-lille.fr/")
 utils.press_button(driver,'clear') # Clear input parameters
 # utils.press_button(driver,'debug') # Allow debug
