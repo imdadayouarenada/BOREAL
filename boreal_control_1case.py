@@ -41,7 +41,8 @@ particle_depolarization = {
 #-------------------------------------------#
 #         OUTPUT DIRECTORY SETUP            #
 #-------------------------------------------#
-directory = '/Users/dada/Documents/Selenium/outputs'
+# directory = '/Users/dada/Documents/Selenium/outputs'
+directory = '/home/cgile/Documents/boreal/outputs'
 if not os.path.exists(directory):
     os.makedirs(directory)
 

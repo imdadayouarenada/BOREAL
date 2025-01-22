@@ -30,9 +30,14 @@ import os
 # output_folder_path_data = '/Users/dada/Desktop/TFM/EARLINET_Database/FINAL_CASES/BCN_12_04_2024/Retrieval_Uncertainty_right_error_sphere_model_DATA_BCN12thApril2024'
 
 # # Lille 30th May 2024
-input_folder_path = '/Users/dada/Desktop/TFM/EARLINET_Database/LILLE_30_05_2020/Retrieval_Uncertainty/realizations'
-output_folder_path_VSD = '/Users/dada/Desktop/TFM/EARLINET_Database/LILLE_30_05_2020/Retrieval_Uncertainty/VSDs_Lille30thMay2020'
-output_folder_path_data = '/Users/dada/Desktop/TFM/EARLINET_Database/LILLE_30_05_2020/Retrieval_Uncertainty/DATA_Lille30thMay2020'
+# input_folder_path = '/Users/dada/Desktop/TFM/EARLINET_Database/LILLE_30_05_2020/Retrieval_Uncertainty/realizations'
+# output_folder_path_VSD = '/Users/dada/Desktop/TFM/EARLINET_Database/LILLE_30_05_2020/Retrieval_Uncertainty/VSDs_Lille30thMay2020'
+# output_folder_path_data = '/Users/dada/Desktop/TFM/EARLINET_Database/LILLE_30_05_2020/Retrieval_Uncertainty/DATA_Lille30thMay2020'
+
+# EXAMPLE 
+input_folder_path = '/home/cgile/Documents/boreal/realizations/realizations'
+output_folder_path_VSD = '/home/cgile/Documents/boreal/VSDs_Lille30thMay2020'
+output_folder_path_data = '/home/cgile/Documents/boreal/DATA_Lille30thMay2020'
 
 if not os.path.exists(output_folder_path_VSD):
     os.makedirs(output_folder_path_VSD)
