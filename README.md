@@ -48,6 +48,11 @@ python3 -m venv boreal-env
 source boreal-env/bin/activate  # On Linux/Mac
 boreal-env\Scripts\activate     # On Windows
 ```
+Conda can also be used (no need to install dependencies after):
+```bash
+conda env create -f environment.yml
+conda activate boreal-env-conda
+```
 
 #### **Step 3: Install Dependencies**
 Install the required Python packages:
