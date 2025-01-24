@@ -1,0 +1,15 @@
+name: boreal-env
+channels:
+  - conda-forge
+dependencies:
+
+  - python=3.9
+  - numpy=1.24.3
+  - pandas=2.2.1
+  - matplotlib=3.9.2
+  - scipy=1.14.1
+  - jupyterlab
+  - pip
+
+  - pip:
+      - -r requirements.txt
