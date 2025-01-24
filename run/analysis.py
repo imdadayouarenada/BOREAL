@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-import utils_analysis
-from utils_analysis import parse_file, create_combined_dataframe
+import run.utils_analysis as utils_analysis
+from run.utils_analysis import parse_file, create_combined_dataframe
 import os
 
 # # 15 April 2022

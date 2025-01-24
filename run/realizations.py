@@ -4,8 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException
-from utils import rename_files
-import utils
+from run.utils import rename_files
+import run.utils as utils
 import os
 import time
 from itertools import product
