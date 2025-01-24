@@ -1,0 +1,55 @@
+# Ignore Conda environment directories
+boreal-env-conda/
+
+# Ignore Python virtual environments
+boreal-env/
+.venv/
+venv/
+
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and database files
+*.log
+*.sqlite3
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Build and distribution directories
+build/
+dist/
+*.egg-info/
+
+# Test output
+*.coverage
+*.pytest_cache/
+.tox/
+
+# Cache files
+*.mypy_cache/
+.cache/
+*.pkl
+*.h5
+*.dat
+
+# Environment files
+environment.yml.lock
+
+# Ignore the actual requirements.txt if it's dynamically created
+# (Comment this out if you want to keep it static)
+# requirements.txt
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

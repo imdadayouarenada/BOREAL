@@ -1,9 +1,9 @@
-name: boreal-env
+name: boreal-env-conda
 channels:
   - conda-forge
 dependencies:
 
-  - python=3.9
+  - python=3.10
   - numpy=1.24.3
   - pandas=2.2.1
   - matplotlib=3.9.2
