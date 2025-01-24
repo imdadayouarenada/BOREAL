@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import run.utils_analysis as utils_analysis
+import utils_analysis as utils_analysis
 from run.utils_analysis import parse_file, create_combined_dataframe
 import os
 
